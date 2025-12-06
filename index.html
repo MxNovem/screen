@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch 10 circles bounce around in an expandable playground">
+    <title>Bouncing Circles Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="add-circle">Add Circle</button>
+        <button id="remove-circle">Remove Circle</button>
+        <button id="reset">Reset</button>
+    </div>
+    
+    <div class="stats">
+        <div id="circle-count">Circles: 10</div>
+        <div id="playground-size">Playground: 0 x 0</div>
+    </div>
+    
+    <div class="size-controls">
+        <div class="control-group">
+            <label>Width:</label>
+            <button class="size-btn" id="width-minus">-</button>
+            <input type="range" id="width-slider" min="300" max="2000" value="800">
+            <button class="size-btn" id="width-plus">+</button>
+        </div>
+        <div class="control-group">
+            <label>Height:</label>
+            <button class="size-btn" id="height-minus">-</button>
+            <input type="range" id="height-slider" min="300" max="2000" value="600">
+            <button class="size-btn" id="height-plus">+</button>
+        </div>
+    </div>
+    
+    <canvas id="playground"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
